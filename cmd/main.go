@@ -32,7 +32,7 @@ func main() {
 	// GET /
 	router.GET("/", func(ctx *gin.Context) {
 		ctx.JSON(http.StatusOK, gin.H{
-			"app":     "Currency Conversion API",
+			"app":     os.Getenv("APP_NAME"),
 			"version": 0.1,
 		})
 	})
